@@ -1,24 +1,24 @@
 #include <stdio.h>
 
 int main() {
-    int n;
-    int count = 0;
+    int j;
+    int c = 0;
 
-    printf("Введіть натуральне число n: ");
-    scanf("%d", &n);
+    printf("Enter a number: ");
+    scanf("%d", &j);
 
-    if(n>150 || n<1){
-        printf("Введіть число від 1 до 150");
-        return 23;
+    if(j>150||j<1){
+        printf("Enter the number between 1 and 150");
+        return 1;
     }
 
-    for (int i = 1; i <= n; i++) {
-        if (n % i == n / i) {
-            count++;
+    for (int i = 1; i <= j; i++) {
+        if (j % i == j / i) {
+            c++;
         }
     }
 
-    printf("Кількість рівних дільників числа %d: %d\n", n, count);
+    printf("The number of even divisors of a number. %d: %d\n", j, c);
 
     return 0;
 }
